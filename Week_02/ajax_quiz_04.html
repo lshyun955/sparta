@@ -13,17 +13,20 @@
     </style>
 
     <script>
-        function q1() {
-            $.ajax({
-          type: "GET",
-          url: `http://numbersapi.com/${$('#magicnum').val()}`,
-          data: {},
-          success: function (image) {
-            
-          },
-        });
+      function q1() {
+        if ($("#magicnum").val() == 0) {
+          alert("숫자를 입력하시오.");
+        } else {
+          $.ajax({
+            type: "GET",
+            url: `http://numbersapi.com/${$("#magicnum").val()}`,
+            data: {},
+            success: function (response) {
+              $("#meaning").text(response);
+            },
+          });
+        }
       }
-        
     </script>
   </head>
 
