@@ -14,7 +14,7 @@
 
     <script>
       function q1() {
-        if ($("#magicnum").val() == 0) {
+        if ($("#magicnum").val() == '') {
           alert("숫자를 입력하시오.");
         } else {
           $.ajax({
@@ -23,7 +23,7 @@
             data: {},
             success: function (response) {
               $("#meaning").text(response);
-            },
+            }
           });
         }
       }

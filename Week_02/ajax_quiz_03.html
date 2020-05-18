@@ -23,9 +23,8 @@
           data: {},
           success: function (image) {
             let cat_list = image[0].url; // == image[0]['url']
-
             $("#img-cat").attr("src", cat_list);
-          },
+          }
         });
       }
     </script>
