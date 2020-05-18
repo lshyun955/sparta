@@ -95,7 +95,7 @@
           alert("주문이 완료되었습니다.");
         }
       }
-
+      function exchange_m() {
       $.ajax({
         type: "GET",
         url: "https://api.manana.kr/exchange/rate.json",
@@ -105,6 +105,8 @@
           $("#exchange").text(txt);
         },
       });
+    }
+    exchange_m();
     </script>
   </head>
   <body>
