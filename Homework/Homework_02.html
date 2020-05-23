@@ -69,6 +69,7 @@
       .exch {
         color: blue;
         font-weight: bold;
+        
       }
     </style>
     <script>
@@ -83,19 +84,24 @@
         let num = $("#num").val();
         if (name == "") {
           alert("주문자를 입력하시오.");
+          $("#name").focus();
         } else if (cnt == "") {
           alert("수량을 입력하시오.");
+          $("#cnt").focus();
         } else if (addr == "") {
           alert("주소를 입력하시오.");
+          $("#addr").focus();
         } else if (num == "") {
           alert("전화번호를 입력하시오.");
+          $("#num").focus();
         } else if (!isPhone(num)) {
           alert("전화번호 입력형식이 틀립니다.");
+          $("#num").focus();
         } else {
           alert("주문이 완료되었습니다.");
         }
       }
-      function exchange_m() {
+    window.onload = function exchange_m() {
       $.ajax({
         type: "GET",
         url: "https://api.manana.kr/exchange/rate.json",
@@ -106,7 +112,7 @@
         },
       });
     }
-    exchange_m();
+
     </script>
   </head>
   <body>
