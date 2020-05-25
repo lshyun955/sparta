@@ -107,7 +107,7 @@
         url: "https://api.manana.kr/exchange/rate.json",
         data: {},
         success: function (response) {
-          let txt = "달러-원 환율 : " + response[1]["rate"];
+          let txt = "달러-원 환율 : " + response[1].rate;
           $("#exchange").text(txt);
         },
       });
